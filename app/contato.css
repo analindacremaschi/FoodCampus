@@ -1,0 +1,42 @@
+.container-sobre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px; 
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.imagem-sobre {
+    flex: 1;
+    max-width: 500px;
+}
+
+.imagem-sobre img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+}
+
+.container-sobre .secao-padrao {
+    flex: 1;
+    margin: 0; 
+    padding: 0;
+}
+
+.container-sobre .cabecalho-secao {
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .container-sobre {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .container-sobre .cabecalho-secao {
+        text-align: center;
+    }
+}

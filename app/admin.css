@@ -1,0 +1,505 @@
+body {
+    background-color: #fcf2f4;
+}
+
+.secao-admin {
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+.fundo-modal-admin {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(45, 38, 40, 0.45);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.caixa-modal-login {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 40px 35px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.botao-fechar-modal {
+    position: absolute;
+    top: 18px;
+    right: 22px;
+    color: #9e9194;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.icone-cadeado {
+    width: 56px;
+    height: 56px;
+    background-color: #fce8ec;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin: 0 auto 16px;
+}
+
+.titulo-modal {
+    font-size: 24px;
+    color: #362e2e;
+    margin-bottom: 6px;
+}
+
+.subtitulo-modal {
+    font-size: 13px;
+    color: #8c8082;
+    margin-bottom: 24px;
+}
+
+.erro-login {
+    background-color: #fde8ec;
+    color: #c94a63;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 12px;
+    margin-bottom: 16px;
+    font-weight: bold;
+}
+
+.formulario-login {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.campo-senha {
+    padding: 14px;
+    border: 1px solid #e6dadc;
+    border-radius: 10px;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 4px;
+    outline: none;
+}
+
+.campo-senha:focus {
+    border-color: #84a58d;
+}
+
+.botao-entrar-painel {
+    background-color: #3b463e;
+    color: #ffffff;
+    border: none;
+    padding: 14px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+}
+
+.alerta-admin-sucesso {
+    background-color: #84a58d;
+    color: #ffffff;
+    padding: 14px 20px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.banner-gerenciador {
+    background-color: #7d9e86;
+    color: #ffffff;
+    border-radius: 20px;
+    padding: 32px 36px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.etiqueta-painel {
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    opacity: 0.85;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.titulo-gerenciador {
+    font-size: 32px;
+    margin-bottom: 6px;
+}
+
+.subtitulo-gerenciador {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.acoes-banner {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.botao-restaurar {
+    background-color: rgba(255, 255, 255, 0.18);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.botao-sair-admin {
+    background-color: #2f3330;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.grade-admin {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 28px;
+    align-items: start;
+}
+
+.coluna-direita-admin {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.cartao-admin {
+    background-color: #ffffff;
+    border: 1px solid #f0e2e5;
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+}
+
+.cabecalho-cartao-admin {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #f5ecee;
+}
+
+.cabecalho-cartao-admin h3 {
+    font-size: 18px;
+    color: #362e2e;
+}
+
+.link-cancelar-edicao {
+    font-size: 11px;
+    font-weight: bold;
+    color: #d9778b;
+}
+
+.formulario-item {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.grupo-campo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.grupo-campo label {
+    font-size: 12px;
+    font-weight: bold;
+    color: #5c5252;
+}
+
+.grupo-campo input,
+.grupo-campo select,
+.grupo-campo textarea {
+    padding: 12px 14px;
+    border: 1px solid #e6dadc;
+    border-radius: 10px;
+    font-size: 13px;
+    font-family: inherit;
+    color: #362e2e;
+    background-color: #ffffff;
+}
+
+.grupo-campo input:focus,
+.grupo-campo select:focus,
+.grupo-campo textarea:focus {
+    border-color: #84a58d;
+    outline: none;
+}
+
+.linha-dupla-campos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.botao-salvar-item {
+    background-color: #84a58d;
+    color: #ffffff;
+    border: none;
+    padding: 14px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    margin-top: 6px;
+}
+
+.botao-salvar-item:hover {
+    background-color: #71927a;
+}
+
+.lista-pedidos-admin {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.card-pedido-detalhe {
+    border: 1px solid #f0e2e5;
+    background-color: #fdfafb;
+    border-radius: 14px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.topo-card-pedido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #efe4e6;
+    padding-bottom: 10px;
+}
+
+.codigo-ped-badge {
+    background-color: #3b463e;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 6px;
+    margin-right: 8px;
+}
+
+.horario-ped {
+    font-size: 12px;
+    color: #7a6f6f;
+}
+
+.valor-ped {
+    font-size: 18px;
+    font-weight: bold;
+    color: #d9778b;
+}
+
+.info-cliente-ped {
+    font-size: 13px;
+    color: #4a4040;
+    line-height: 1.6;
+}
+
+.box-modalidade-ped {
+    background-color: #eef4f0;
+    border-left: 4px solid #84a58d;
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    color: #3b463e;
+}
+
+.box-modalidade-ped.is-delivery {
+    background-color: #fceef1;
+    border-left-color: #d9778b;
+    color: #6e3541;
+}
+
+.endereco-ped {
+    margin-top: 4px;
+    font-size: 12px;
+}
+
+.lista-itens-ped {
+    background-color: #ffffff;
+    border: 1px solid #f2e6e9;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 13px;
+}
+
+.titulo-itens-ped {
+    display: block;
+    font-size: 11px;
+    font-weight: bold;
+    color: #8c8082;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+}
+
+.lista-itens-ped ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.lista-itens-ped li {
+    display: flex;
+    justify-content: space-between;
+    color: #362e2e;
+}
+
+.botoes-status-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 4px;
+}
+
+.botao-etapa {
+    width: 100%;
+    padding: 10px 6px;
+    border-radius: 10px;
+    border: 1px solid #e6dadc;
+    background-color: #ffffff;
+    color: #5c5252;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.botao-etapa.ativa {
+    background-color: #7d9e86;
+    color: #ffffff;
+    border-color: #7d9e86;
+}
+
+.contador-itens-badge {
+    background-color: #fceef1;
+    color: #d9778b;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 12px;
+    border-radius: 14px;
+}
+
+.tabela-admin {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabela-admin th {
+    text-align: left;
+    font-size: 12px;
+    color: #8c8082;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #f5ecee;
+}
+
+.tabela-admin td {
+    padding: 12px 6px;
+    border-bottom: 1px solid #faf4f5;
+    font-size: 13px;
+    color: #362e2e;
+    vertical-align: middle;
+}
+
+.celula-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: bold;
+}
+
+.miniatura-tabela {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.badge-categoria {
+    background-color: #f4f6f5;
+    color: #6b7a70;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+
+.celula-preco {
+    font-weight: bold;
+    color: #5c5252;
+}
+
+.celula-acoes {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.form-inline {
+    display: inline;
+}
+
+.botao-icone-editar,
+.botao-icone-excluir {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    border: 1px solid #f0e2e5;
+    background-color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.botao-icone-editar:hover {
+    background-color: #eef5f0;
+}
+
+.botao-icone-excluir:hover {
+    background-color: #fde8ec;
+}
+
+@media (max-width: 900px) {
+    .grade-admin {
+        grid-template-columns: 1fr;
+    }
+    .botoes-status-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}

@@ -1,0 +1,103 @@
+.alerta-sucesso {
+    background-color: #84a58d;
+    color: #ffffff;
+    padding: 14px 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    max-width: 760px;
+    margin: 0 auto 30px;
+}
+
+.cartao-status {
+    background-color: #ffffff;
+    border: 1px solid #efe6e1;
+    border-radius: 16px;
+    padding: 32px;
+    max-width: 760px;
+    margin: 0 auto;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+}
+
+.topo-status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.etiqueta-codigo {
+    font-size: 11px;
+    color: #8c8080;
+    letter-spacing: 1px;
+}
+
+.numero-codigo {
+    font-size: 26px;
+    margin: 4px 0;
+}
+
+.texto-modalidade {
+    font-size: 13px;
+    color: #6b6060;
+}
+
+.etiqueta-recebido {
+    background-color: #84a58d;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 6px 14px;
+    border-radius: 20px;
+}
+
+.linha-do-tempo {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.etapa-status {
+    opacity: 0.45;
+}
+
+.etapa-status.concluida {
+    opacity: 1;
+}
+
+.circulo-etapa {
+    width: 48px;
+    height: 48px;
+    background-color: #f4ece8;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px;
+    font-size: 20px;
+}
+
+.etapa-status.concluida .circulo-etapa {
+    background-color: #f497a9;
+    color: #ffffff;
+}
+
+.tempo-etapa {
+    display: block;
+    font-size: 10px;
+    color: #d9778b;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.etapa-status strong {
+    font-size: 13px;
+}
+
+@media (max-width: 768px) {
+    .linha-do-tempo {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
